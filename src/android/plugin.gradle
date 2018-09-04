@@ -5,15 +5,16 @@ repositories {
     }
 }
 dependencies {
-    implementation "com.android.support:appcompat-v7:27.1.0"
+    compile "com.android.support:appcompat-v7:23.1.0"
+    compile "com.android.support:multidex:1.0.1"
     compile(name: 'bouncycastle', ext: 'aar')
     compile(name: 'inAppSDK', ext: 'aar')
 }
 android {
-    compileSdkVersion 27
+    compileSdkVersion 23
     defaultConfig {
         minSdkVersion 19
-        targetSdkVersion 27
+        targetSdkVersion 23
         multiDexEnabled true 
     }
     packagingOptions {
