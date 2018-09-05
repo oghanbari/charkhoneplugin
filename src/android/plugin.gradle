@@ -10,12 +10,14 @@ dependencies {
     implementation(name: 'bouncycastle', ext: 'aar')
     implementation(name: 'inAppSDK', ext: 'aar')
 }
-defaultConfig {
-        minSdkVersion 14
-        targetSdkVersion 22
-        multiDexEnabled true
-}
-packagingOptions {
+android {
+	defaultConfig {
+        	minSdkVersion 14
+        	targetSdkVersion 22
+        	multiDexEnabled true
+	}
+	packagingOptions {
         exclude 'META-INF/NOTICE'
         exclude 'META-INF/LICENSE'
+	}
 }
