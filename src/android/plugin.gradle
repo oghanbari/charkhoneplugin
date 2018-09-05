@@ -5,11 +5,14 @@ repositories {
     }
 }
 dependencies {
-    implementation "com.android.support:appcompat-v7:23.1.0"
+    implementation "com.android.support:appcompat-v7:25.3.1"
     implementation(name: 'bouncycastle', ext: 'aar')
     implementation(name: 'inAppSDK', ext: 'aar')
 }
-android {
+    defaultConfig {
+        minSdkVersion 14
+        targetSdkVersion 22
+    }
     packagingOptions {
         exclude 'META-INF/NOTICE'
         exclude 'META-INF/LICENSE'
