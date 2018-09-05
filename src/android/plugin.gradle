@@ -5,7 +5,7 @@ repositories {
     }
 }
 dependencies {
-    implementation "com.android.support:appcompat-v7:25.3.1"
+    implementation "com.android.support:appcompat-v7:+"
     implementation(name: 'bouncycastle', ext: 'aar')
     implementation(name: 'inAppSDK', ext: 'aar')
 }
