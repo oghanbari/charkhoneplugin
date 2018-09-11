@@ -10,6 +10,22 @@ dependencies {
     implementation(name: 'inAppSDK', ext: 'aar')
 }
 android {
+
+configurations.all {
+resolutionStrategy.eachDependency { DependencyResolveDetails details ->
+    def requested = details.requested
+    if (requested.group == 'com.android.support') {
+        if (!requested.name.startsWith("multidex")) {
+            details.useVersion '26.1.0'
+        }
+    } else if (requested.group == "com.google.android.gms") {
+        details.useVersion '11.8.0'
+        } else if (requested.group == "com.google.firebase") {
+            details.useVersion '11.8.0'
+          }
+      }
+}
+
     packagingOptions {
       		exclude 'META-INF/NOTICE'
 	  	exclude 'META-INF/LICENSE'
