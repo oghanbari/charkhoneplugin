@@ -6,6 +6,9 @@ repositories {
 }
 dependencies {
     implementation "com.android.support:appcompat-v7:25.3.1"
+	{
+	    exclude group : 'com.google.code.gson'
+	}
     implementation(name: 'bouncycastle', ext: 'aar')
     implementation(name: 'inAppSDK', ext: 'aar')
 }
@@ -17,6 +20,5 @@ android {
     packagingOptions {
       		exclude 'META-INF/NOTICE'
 	  	exclude 'META-INF/LICENSE'
-	  	exclude 'com/google/gson/annotations/Expose.class'
     }
 }
