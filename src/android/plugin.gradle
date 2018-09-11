@@ -5,7 +5,6 @@ repositories {
     }
 }
 dependencies {
-    compile "com.google.code.gson:gson:2.8.2"
     compile "com.android.support:appcompat-v7:25.3.1"
     compile(name: 'bouncycastle', ext: 'aar')
     compile(name: 'inAppSDK', ext: 'aar')
