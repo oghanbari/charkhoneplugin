@@ -11,11 +11,6 @@ dependencies {
     compile(name: 'inAppSDK', ext: 'aar')
 }
 android {
-    compileSdkVersion 25
-    dexOptions {
-        jumboMode true
-        javaMaxHeapSize "4g"
-    }
     packagingOptions {
         exclude 'META-INF/NOTICE'
         exclude 'META-INF/LICENSE'
