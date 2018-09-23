@@ -19,6 +19,6 @@ android {
         exclude 'META-INF/LICENSE'
     }
 }
-configurations {
-        compile.exclude group : 'com.google.code.gson' , module : 'annotations'
+configurations {    
+    all*.exclude group: 'com.google.gson', module:'annotations'
 }
