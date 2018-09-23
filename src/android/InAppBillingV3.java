@@ -16,6 +16,7 @@ import android.util.Log;
 import com.alexdisler.inapppurchases.IabHelper.OnConsumeFinishedListener;
 import com.android.billingclient.util.MarketIntentFactorySDK;
 import net.jhoobin.jhub.PluginInitialization;
+import net.jhoobin.jhub.util.AccountUtil;
 import org.apache.cordova.CallbackContext;
 import org.apache.cordova.CordovaInterface;
 import org.apache.cordova.CordovaPlugin;
@@ -200,8 +201,16 @@ public class InAppBillingV3 extends CordovaPlugin {
             return setMsisdn(args, callbackContext);
         } else if ("setDelayPayment".equals(action)) {
             return setDelayPayment(args, callbackContext);
+        } else if ("removeAccount".equals(action)) {
+            return removeAccount(callbackContext);
         }
         return false;
+    }
+
+    private boolean removeAccount(CallbackContext callbackContext) {
+        AccountUtil.removeAccount();
+        callbackContext.success();
+        return true;
     }
 
     private boolean setMsisdn(JSONArray args, CallbackContext callbackContext) {

@@ -113,6 +113,12 @@ var nativeCall = function nativeCall(name) {
   });
 };
 
+inAppPurchase.removeAccount = function () {
+    return nativeCall('init', []).then(function () {
+        return nativeCall('removeAccount',[]);
+    }).then();
+};
+
 inAppPurchase.setMsisdn = function (msisdn, editable) {
     return nativeCall('init', []).then(function () {
         return nativeCall('setMsisdn', [msisdn, editable]);
