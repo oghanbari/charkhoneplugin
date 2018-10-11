@@ -37,7 +37,7 @@
 
   <platform name="android">
     <js-module src="www/index-android.js" name="InAppBillingV3">
-      <clobbers target="inAppPurchase" />
+      <merges target="inAppPurchase" />
     </js-module>
 
     <config-file target="res/xml/config.xml" parent="/*">
