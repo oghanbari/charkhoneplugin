@@ -8,6 +8,13 @@
     "watch": "mocha --watch --compilers js:babel-core/register --require babel-polyfill test/*",
     "coverage": "nyc npm test && nyc report --reporter=text-lcov | coveralls"
   },
+  "cordova": {
+    
+	"id": "charkhone-plugin-inapppurchase-sdk",
+
+	"platforms": ["android","ios"]
+  
+  },
   "repository": {
     "type": "git",
     "url": "git://github.com/AlexDisler/cordova-plugin-inapppurchase.git"
