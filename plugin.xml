@@ -65,9 +65,6 @@
     <source-file src="src/android/Security.java" target-dir="src/com/alexdisler/inapppurchases" />
     <source-file src="src/android/SkuDetails.java" target-dir="src/com/alexdisler/inapppurchases" />
 	<source-file src="src/android/billing/IInAppBillingService.aidl" target-dir="src/com/android/vending/billing" />
-
-	<asset src="www/my-manifest.json" target="my-manifest.json" />
-	
   </platform>
 
 </plugin>

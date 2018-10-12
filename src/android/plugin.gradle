@@ -15,8 +15,5 @@ android {
         exclude 'META-INF/NOTICE'
         exclude 'META-INF/LICENSE'
     }
-    dexOptions {
-        javaMaxHeapSize "4g"
-    }
 }
 configurations.all{ exclude group: 'com.google.code.gson', module: 'gson' }
