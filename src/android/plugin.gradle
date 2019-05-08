@@ -19,4 +19,7 @@ android {
     	javaMaxHeapSize "4g"
     }
 }
-configurations.all{ exclude group: 'com.google.code.gson', module: 'gson' }
+configurations.all{ 
+	exclude group: 'com.google.code.gson', module: 'gson' 
+	exclude group: 'net.jhoobin.amaroid' 
+}
