@@ -20,5 +20,6 @@ android {
     }
 }
 configurations.all{ 
-	exclude group: 'com.google.code.gson', module: 'gson' 
+	exclude group: 'com.google.code.gson', module: 'gson'
+	exclude group: 'net.jhoobin.amaroid.dto' 
 }
